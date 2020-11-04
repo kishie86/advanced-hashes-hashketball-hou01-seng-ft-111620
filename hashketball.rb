@@ -226,9 +226,6 @@ def big_shoe_rebounds
   largest_player = " "
   shoe_size = 0
   
-  shoe_size = 2
-  shoe_size = 3
-  
   game_hash.each do |home, team_name|
     team_name[:players].each do |player_hash|
     
