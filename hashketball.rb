@@ -235,18 +235,12 @@ def big_shoe_rebounds
       if player_hash[:shoe] > largest_shoe_size_so_far
         #binding.pry
         largest_shoe_size_so_far = player_hash[:shoe]
-        #player_hash[:player_name]
-      
-      largest_player_so_far = player_hash
-  
-          
+        largest_player_so_far = player_hash
         
-      #end
       end
-      
     end
    
-  end
+ end
   return largest_player_so_far[:rebounds]
 end
  
