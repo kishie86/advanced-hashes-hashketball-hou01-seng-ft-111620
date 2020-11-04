@@ -238,7 +238,7 @@ def big_shoe_rebounds
         #player_hash[:player_name]
        
      
-     if largest_player = player_hash[:player_name]  && player_hash[:shoe]
+     #if largest_player = player_hash[:player_name]  && player_hash[:shoe]
        
        shoe_size += 1
           return player_hash[:rebounds]
