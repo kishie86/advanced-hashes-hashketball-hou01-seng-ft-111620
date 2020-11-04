@@ -239,7 +239,7 @@ def big_shoe_rebounds
       
       largest_player_so_far = player_hash
   
-          
+          return player_hash[:rebounds]
         
       #end
       end
@@ -247,7 +247,6 @@ def big_shoe_rebounds
     end
    
   end
- return player_hash[:rebounds]
 end
  
 
