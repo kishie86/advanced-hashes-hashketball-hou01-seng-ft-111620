@@ -232,6 +232,7 @@ def big_shoe_rebounds
       #after found return player's rebounds
       
       if player_hash[:shoe] > shoe_size
+        binding.pry
         #player_hash[:player_name]
        
      
