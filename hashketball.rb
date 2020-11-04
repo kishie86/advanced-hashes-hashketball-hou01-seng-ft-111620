@@ -238,7 +238,7 @@ def big_shoe_rebounds
         #player_hash[:player_name]
       
   
-          return player_hash[:rebounds]
+          
         
       #end
       end
@@ -246,7 +246,7 @@ def big_shoe_rebounds
     end
    
   end
- 
+ return player_hash[:rebounds]
 end
  
 
