@@ -232,9 +232,9 @@ def big_shoe_rebounds
       #need find player with largest shoe shoe_size
       #after found return player's rebounds
       
-      if player_hash[:shoe] > shoe_size
+      if player_hash[:shoe] > largest_shoe_size_so_far
         #binding.pry
-        shoe_size = player_hash[:shoe]
+        largest_shoe_size_so_far = player_hash[:shoe]
         #player_hash[:player_name]
       
   
