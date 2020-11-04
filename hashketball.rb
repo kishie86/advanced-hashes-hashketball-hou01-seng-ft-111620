@@ -169,30 +169,90 @@ end
   
   
 def team_colors(team_name)
+  #binding.pry
   array_of_colors = []
+  array_of_colors_2 = []
+  
   game_hash.each do |key, value|
-      value.each do |key_2, value_2|
-     
-      colors = ["Black", "White"]
-      #binding.pry
-        array_of_colors << colors
-       
-        if team_name == "Brooklyn Nets"
-          return colors
+    if value[:team_name] == team_name
+      return value[:colors]
       
-          end
-      end
     end
   end
 end
 
-
-def team_names 
-  game_hash.each do |key, value|
-    binding.pry
+def team_names
+  array_team_names = []
+  game_hash.each do |home, team_name|
   
+    #binding.pry
+    array_team_names << team_name[:team_name]
+  end
+  return array_team_names
+ end  
+ 
+ 
+ def player_numbers(team_name)
+   jersey_numbers = []
+   game_hash.each do |home, value|
+    if value[:team_name] == team_name  
+      value[:players].each do |key, detail|
+     #binding.pry
+     jersey_numbers << key[:number]
+     
+
+ end
+ end 
+ end
+ return jersey_numbers 
+ end
+ 
+ 
+ def player_stats(player_name)
+    player_stats = {}
+      game_hash.each do |home, team_name|
+        team_name[:players].each do |key, value|
+           #binding.pry
+        if player_name == key[:player_name]
+       return key
+    
+        end
+      end
+    end
+ end
+
+
+def big_shoe_rebounds
+  largest_player = " "
+  shoe_size = 0
+  game_hash.each do |home, team_name|
+    team_name[:players].each do |player_hash|
+    
+      #need find player with largest shoe shoe_size
+      #after found return player's rebounds
+      
+      if player_hash[:shoe] > shoe_size
+        #player_hash[:player_name]
+       
+     
+     if largest_player = player_hash[:player_name]  && player_hash[:shoe]
+       
+       shoe_size += 1
+          return player_hash[:rebounds]
+        
+      end
+      end
+      
+    end
+   
+  end
+ 
 end
-end
+ 
+
+ 
+
+
 
 
 
