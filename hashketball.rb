@@ -225,6 +225,10 @@ def team_names
 def big_shoe_rebounds
   largest_player = " "
   shoe_size = 0
+  
+  shoe_size = 2
+  shoe_size = 3
+  
   game_hash.each do |home, team_name|
     team_name[:players].each do |player_hash|
     
@@ -233,6 +237,7 @@ def big_shoe_rebounds
       
       if player_hash[:shoe] > shoe_size
         binding.pry
+        shoe_size = player_hash[:shoe]
         #player_hash[:player_name]
        
      
