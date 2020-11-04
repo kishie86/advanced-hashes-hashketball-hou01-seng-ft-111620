@@ -223,8 +223,8 @@ def team_names
 
 
 def big_shoe_rebounds
-  largest_player = " "
-  shoe_size = 0
+  largest_player_so_far = " "
+  largest_shoe_size_so_far = 0
   
   game_hash.each do |home, team_name|
     team_name[:players].each do |player_hash|
